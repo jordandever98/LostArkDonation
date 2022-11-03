@@ -1,0 +1,202 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_TotalDonations" Type="OutArgument(x:Int32)" />
+    <x:Property Name="out_Logout" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>444,1628</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence for Lost Ark Guild Donations" sap:VirtualizedContainerService.HintSize="454,1563" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="TotalDonations" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="Count" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="412,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Welcome to the DonationBot. Please start at the Character Selection screen&quot;]" />
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="412,291" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Click on the number of characters to donate on based on the position in the 'Switch Characters' game menu." OptionsString="1;2;3;4;5;6;7;8;9" Title="How many characters to donate on?">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Int32">[TotalDonations]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" sap2010:Annotation.AnnotationText="Be sure you START from the Character Selection Screen" AttachMode="ByInstance" DisplayName="Character Selection" sap:VirtualizedContainerService.HintSize="452,913" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8ea5c095-6a0f-430a-b57f-1efc5edc5d27" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="418,593" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="GuildMenuOpen" />
+              <Variable x:TypeArguments="x:Boolean" Name="CommunityExists" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Character Selection" sap:VirtualizedContainerService.HintSize="376,499" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick sap2010:Annotation.AnnotationText="" ClickType="Single" DisplayName="Click First Character on Selection Screen" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8ea5c095-6a0f-430a-b57f-1efc5edc5d27" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="0, 0, 160, 134" FriendlyName="'lostark.exe LOST'" Guid="315a6f48-5c8d-4a53-b9d1-c3021e8b89a3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAACGCAYAAABaOoEGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFsSURBVHhe7dJBCQBAEMSw8W96D85EPynEQXdS2B9wGzQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgKQMSMqApAxIyoCkDEjKgHR2D0Jh3NxTIlptAAAAAElFTkSuQmCC" InformativeScreenshot="3959efa901cb83308de3efe2383bef1f.png" ScopeSelectorArgument="&lt;wnd app='lostark.exe' cls='EFLaunchUnrealUWindowsClient' title='LOST ARK (64-bit, DX11) v.2.8.1.1' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive">
+                    <uix:TargetAnchorable.PointOffset>
+                      <uix:PointOffset Position="TopLeft" X="500" Y="825" />
+                    </uix:TargetAnchorable.PointOffset>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="8ea5c095-6a0f-430a-b57f-1efc5edc5d27" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1080" FilePath="C:\Program Files (x86)\Steam\steamapps\common\Lost Ark\Binaries\Win64\lostark.exe" IconBase64="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" InformativeScreenshot="1c9c8f286cab011706352fca078bd0cd.png" Selector="&lt;wnd app='lostark.exe' cls='EFLaunchUnrealUWindowsClient' title='LOST ARK (64-bit, DX11) v.2.8.1.1' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Count &lt; TotalDonations]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,752" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,587" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[Count]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">[Count +1]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Count is &quot; + Count.ToString]" />
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Guild Menu and Donation.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Change Characters.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_Count">[Count]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+    </ui:InterruptibleWhile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="412,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Donations completed.&quot;]" />
+  </Sequence>
+</Activity>

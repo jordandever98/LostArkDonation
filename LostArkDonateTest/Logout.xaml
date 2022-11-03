@@ -1,0 +1,120 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_Logout" Type="OutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1295,1222</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Logout_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="476,1157" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,291" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Do you want the robot to log out for you when it is done?" OptionsString="Yes;No" Title="Logout?">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Boolean">[out_Logout]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Application: LOST ARK (64-bit, DX11) v.2.8.1.1" sap:VirtualizedContainerService.HintSize="434,734" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0f44ec71-a945-4409-a0c4-64bb03dd008e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,445" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'lostark.exe LOST'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f44ec71-a945-4409-a0c4-64bb03dd008e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1310, 662, 65, 47" FriendlyName="'lostark.exe LOST'" Guid="0073831f-88fe-4814-bb8d-4d1f63140df9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAAvCAYAAAC8CadvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAzBSURBVGhDlZn5d1VFEsf5USDJy3tZXhYIQtgDITAiCCIgCjiOLAHRYcBRHGQZhyXsCDosZ2BGXDgSYBggIMoWtpBAIAx48Ix/V01VdVd3dd/7XgLnfM+9vVX393Or+94XBtXX1QBpWF0tX1m1NVCHoquTtPUjisOxeFweavPVUFNdBXmtfBXU1lSjsN2qjoT9tdy8an5uS+kr9RS3huZMkZ7TlM29gxAIJyUI/YKI2hwAvOcF0eRo2kFA83SVBck1MKXvo3ldu0iX3RgrrBOzadJAkhDsxKkQSNhHm02t57p0CMnF6MUbeN6UXQPGFmN1adCCMZRBRq4PqhgQhEBmrCFtSkvaUGy0XkHQY2ydgYeTagB0byeVp+DvLQxrhGKlATBZE0GwbU62TkDI2iQetdFc/ICsBhkzWtaQSIw6GQAOQtC3lidy1GMIynAe26urKqGqqgKqKiv53kAhEx4AxfUmC0AoomB9ShpICgRrTpkO71UfHdj2keACwEFggxYAlsl0ZUUOxo4dA9OmTYX6+jqEUeGyQ2KymRcwXUhiPFizrWMI6SDS5TKggGRSn246C0yGVFdVoeEcjBjRAGfPnYXOW52wvW0b5HLlnBk0hhcu8QpAiPe93wIkXI81qfukgXAQBgIi7OsPQilzULtweeoGhBICqcIMyJZnYPToRrh15xY87nsMX5/4F5RlSqECQVRXV/JYiVMMgigshyZJIQwpm7oAQiwHADs7CPZQdNKHJPcLJ+D0xydLxqrxKVfmcpwZmbJSGDNmNNy5dxuePnsKp9pPQaa0DEY0NHCfatwa1J+ygkE4A+nSQLR5rbRxtM6BQZA6MixSZQZgIbB5bKsjGHiVM6ACjdHTp1gbN22ACsyGMXge3O26C89/fQ7nzp2DXFkWPvt0PezcvgPj1kEui9vDnhNsJJgnaUjMFlNy3AAhBOZTJAujKwWVay1Okq+uhko0QobmzZsLjx71wuUrl7hu7LixAYQsQti3ay/8+stzaG9vx/E1kM1mGMRAssHLm3Zri8QPy/YfxEaUcW8eO1M5MpwQ97PB8Wr2sodA24AyYPbsWXDnzm14+PABHDl6GMqxbtz4cXAPITz75RmcPn0aBuG/12fPhutXryGsR7B3/16OQ+dEHuNQRnD8AmdELGdar1FJQBgImHpGZEplAENQbbG4nw2KVwooT4yueXwN5nJZnuzY8WPQ09MN35/8HmqwPHjwSzCeIdyDJ0/64OTJkzBkyGAYXPISTJ3WAj9euQw9j7rh3fd+z+cHHaYEgt46FNsLDRcTwyh2TtB2cKY8BCdXryDodktYqMtrka50DlAal2fKoKlpIpslCE3NTVBaVgIlJUP5G0EgfPvNN1xXlimBoSVD4E8frYb7vffh1JkfoKFhOGZDlmOScfemobkCIF5pMMhwDMBACMwqg2JaS7fZe5cBtCBcpHwg8dcgPr0MQti0cRM86HkA58+fZwC0FUj0drh9+zZ0I5wjRw5zXzoDMtinpWUK3Oi8Dj9dvQJTpjTzlqKY9OTZKM3HEMwbKIbgpSFoxRAiY964ygJp0+14z9uBQMiirOipVVZkobSkBI4ePgpPHvXB8mXLsTwUKrJZ/lqkJ7lt61bo6LgI06a28NOusm8R2gIdlzqgCzNl/vx5DI0+r83TRxPO/MDlzYcg0t8OMYAYgpKDQBMlIOTYtEBYvGgRlJaWsFn+bEbDufJyNl2JX5D8LWHfJEOHDIGLCIey5K23FiQgOGORTH3Yp5AEhjoTlDkup2WB+kq0Y3hvUVBaHBrnLWE/lWk7lKHpr778Eh496IXP/rIeP4joq9BAoD50ePIWwjGkajRKUGryebj6889w985dmD3rNbsdzKsySHMxFMmbLQyE+xaHQErZCq7dt9Xgt4D7oaREvw8orVtbl0NPdw903emCTEkZP333YwklC5dPagI3d84b0N3VDR3nO2DUyJEGAr0dFIQ0SSxSsj19nIcQGIzqXJvNjmHmaraBMSIHohb9UKLUbmwcBZ03b0Jf72N4a94CyGbMFiAQ/P63EGlLZDMZ3jLbtmzFLfQEjh46gm8Y3C54vvAr0kEQJU0Vk4fjxxsIgdFIQX0IgeoEgoDgLUH3tmy+FrOwds0azIZuuH7tGix4801+dRIIgkS/Hs2VDswKWLVqFb81nvT1QfPkydymf0cUVmg4TWlZkoTgDFvFAKwoC+iM4KAWgoOh7mnP86mPT/Hy5Ut80HXe7OQnXYbnQ0npUP4uGFIyGCZMHI+fy6eg50EPfzusWNHKfWh8DY43BjDugORNa8NaAiTcDnIv5QBKHQxXGSAHolYMgQ4dutIhWIHpXJ7LwOkz7XC/q4u3Buni+Yvwz+PH4dQPp/jJ96H5W7c64YMPP+A3gjlE8UCkeNF8onQIoqTpcGx8MGrFEAiAQLD1YUCc0JrnrSCLRlhUxxlB+xrv339/JXz37XfQ+7AXentJD1k3blyHtrY2/GaYylug0r1FKAsiCPb1xtL1KGPaAIjrdVnUPwQuJ7OAvw/oyjLBNAS68iQ2Y6hOvg04vbFMfzuYPv0VWLR4If+VaVh9PX9I0duDvjHkIEwzGkAQxX0GKAvBGywEwEHAem2+IASagBdn+sqE/OpEg/yhhE87SweiEr1W6U9s1I9BikEtF9ve63IsaS8ihCAALIQIAElDkAygwfVWHIwWbCUwBIAWPVl6a5BJuso9bRe+Uh2NlwzoTzJ/WhtJ2osogkAKAbizgCGEB6KB4M2L9HbQAGhRcuUYqizGzX62+5faBTqNeRHR+AGqAAR778xbcZYIBGOYzdqriD5+uB4XIwC8Ebrae4qj27CsIQiIpFSMQqKxOk6KpD65HQRCDICygJ4KSht2sl99RqaOJnAQ7BM1hsWArzP1VJeUGKG/VHkAOk4/sma1cRcTpSDQU1ZZEMi0ScAEgEgEgq7UV5v0Zs3iuWzB0l+yEou2ZbdgureKYbj4DNuPdbGstHlRSibosq3DBcpieVIcGG8Bls0A2t8k6icLk4X6hWMMW+f7UJ2SXSTP58aF8lBEYUwzp42RohQIsQiKhaCDS1AyGkmAaAijG0fCuo//DB0XL/AH0YEv9sPvprVwm1s0LzjP8zU1TYCZM6Zz3ZTmSbwWbTxNDMOaSmYKlUW2TOu36h+CzQK654UKXRuA3g78hlAHJb8GLQR6tW7Z8jkcPPAFTGqaCI2jRsK+vXvg8OFDXKZFSVxaHPV/9ZVpsPDtBTB2TCNcuPAf7icZwVdnRgzKeFN2MIL+RuYhWg9WCCFtC4gUBLyaP6rYRXNAK5zIfC/4TDAw8jBn9iz8FN4Gy5YucZPTH0n27tkN69Z9Akuxfu4bc2DM6EZYvPBtaF2+FObNnQOr//ghbNiwHn777X9w7Ng/EMhou+hCBr0pku6T1lfDKA6BjQsEHKDFATyEIBNQ5r2fhyXvvQs72razUZl0wvhxsHNHG2vz5o2wdMkfuG7tmtXw182bYOXKVtize5fNhPMwaVKTMxeb9MaMuVDYh2T7slRZxhWBoADwvcmGEIQCEEDwf1NYhE939+6d8M47ixjAyyOGw8yZMxjMpo0bEMKmfiFMToHgTCozodL6G8Vg7JlAICJRFuBVIBjTGoCHYECQwmwgjcM0PnjwAOzc2QYjhg+DTz/5GLru3YX9+/bC/PlzGUTrsqXQ0tIMW/72uYGwohXB7eItwmfCpIlmLjuvNxSb1mWpU5K1ozddbzMhMq+UMK9FQRwEAyCGQO2v47lw4sTXcPPmDfjpyo/w7Ol/4dDfv4KW5snw0do1DOXM6Xb499kzAQRaLP3X3Wlsa548yc/J0kblntah64uIPRh/HgJXGDEArNNmE1cnO3EBCCZdaeI8jHx5BKoBmjG9X5vxKh92NFfD8Hr8WT3cxZb+pIZhpo3qdOpLKpuyjAnH0r2sM9nHy0CIAVhxAA3CDbSTsHlcjDItfzTlq4NgFiSSWPIkqN3NZfuE8vOJ+TS5fmqsm0vVxXIQYjEQPC/EaCyeVN0HINQ9/ySmfjiZLIQXpeBqCGlGfF0s3a7ueb4YjrQnFWSCg2C3At3rzrxQK19vJ6HJaFINQEHQY53Uk5c6F88tXN9L2fePFfZT4ywQA0X3IwjavAVAV/eknLAOB8hEiYkpOE0SQ0BxWzQmVTiPX3xSqWMiiTGjOEZcb8ohBAIg2wO3QnrgUK6PQEgDYSHo/iyCG9eh9MJ9XbLfQGXm9jEllqypCIQoG+yA+GqEgclobF70AhBMHzSv5g2UVieSMWpsPKdeh9wnvxNQ9CNGTm5zFVE5RRKUzMaZQGWGYEBIX5Yaq8vyxII2aS+kuK+VGE3Mbevqamvg/wwaYaAwR1Z8AAAAAElFTkSuQmCC" InformativeScreenshot="3c1073c86ebe9073aa830e1d8458f976.png" ScopeSelectorArgument="&lt;wnd app='lostark.exe' cls='EFLaunchUnrealUWindowsClient' title='LOST ARK (64-bit, DX11) v.2.8.1.1' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'lostark.exe LOST'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f44ec71-a945-4409-a0c4-64bb03dd008e" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="877, 552, 84, 30" FriendlyName="'lostark.exe LOST'" Guid="48264bba-31ab-4736-84e5-95d17f488e1b" ImageBase64="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" InformativeScreenshot="496a10783d290c38d9a902556d786f0b.png" ScopeSelectorArgument="&lt;wnd app='lostark.exe' cls='EFLaunchUnrealUWindowsClient' title='LOST ARK (64-bit, DX11) v.2.8.1.1' /&gt;" SearchSteps="Image" TargetType="ImageBased" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1920, 1080" FilePath="C:\Program Files (x86)\Steam\steamapps\common\Lost Ark\Binaries\Win64\lostark.exe" IconBase64="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" InformativeScreenshot="7fcbc91961821cb32e22b3892994be1d.png" Selector="&lt;wnd app='lostark.exe' cls='EFLaunchUnrealUWindowsClient' title='LOST ARK (64-bit, DX11) v.2.8.1.1' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
